@@ -15,6 +15,11 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+//Generate Application Key
 $router->get('/key', function(){
 	return str_random(32);
+});
+
+$router->get('/get-method', function(){
+	return "This is GET Method";
 });
