@@ -45,6 +45,10 @@ $router->get('/optional[/{param}]', function($param = null){
 	return $param;
 });
 
-$router->get('/profile', ['as' => 'route.profile', function(){
+$router->get('profile', function(){
+	return redirect()->route('route.profile');
+});
+
+$router->get('/profile/idstack', ['as' => 'route.profile', function(){
 	return route('route.profile');
 }]);
