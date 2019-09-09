@@ -20,6 +20,8 @@ $router->get('/key', function(){
 	return str_random(32);
 });
 
+
+// Basic Route
 $router->get('/get-method', function(){
 	return "This is GET Method";
 });
@@ -28,6 +30,8 @@ $router->post('/post-method', function(){
 	return "This is POST Method";
 });
 
+
+// Basic Route Parameter
 $router->get('/user/{id}', function($id){
 	return "User ID : " . $id;
 });
@@ -36,6 +40,11 @@ $router->get('/post/{postId}/comments/{commentId}', function ($postId, $commentI
 	return 'Post ID : ' . $postId . '. Comment ID : ' . $commentId;
 });
 
+// Optional Route Parameter
 $router->get('/optional[/{param}]', function($param = null){
 	return $param;
 });
+
+$router->get('/profile', ['as' => 'route.profile', function(){
+	return route('route.profile');
+}]);
