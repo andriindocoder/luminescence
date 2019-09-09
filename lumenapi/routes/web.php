@@ -23,3 +23,7 @@ $router->get('/key', function(){
 $router->get('/get-method', function(){
 	return "This is GET Method";
 });
+
+$router->post('/post-method', function(){
+	return "This is POST Method";
+});
