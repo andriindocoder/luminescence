@@ -27,3 +27,7 @@ $router->get('/get-method', function(){
 $router->post('/post-method', function(){
 	return "This is POST Method";
 });
+
+$router->get('/user/{id}', function($id){
+	return "User ID : " . $id;
+});
