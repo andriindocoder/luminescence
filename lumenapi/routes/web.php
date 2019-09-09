@@ -16,9 +16,7 @@ $router->get('/', function () use ($router) {
 });
 
 //Generate Application Key
-$router->get('/key', function(){
-	return str_random(32);
-});
+$router->get('/key', 'ExampleController@generateKey');
 
 $router->get('/admin/home', ['middleware' => 'age', function(){
 	return 'Old Enough';
