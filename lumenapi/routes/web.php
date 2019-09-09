@@ -18,6 +18,9 @@ $router->get('/', function () use ($router) {
 //Generate Application Key
 $router->get('/key', 'ExampleController@generateKey');
 
+$router->get('/user/{id}', 'ExampleController@getUser');
+$router->get('/post/cat1/{cat1}/cat2/{cat2}', 'ExampleController@getPost');
+
 $router->get('/admin/home', ['middleware' => 'age', function(){
 	return 'Old Enough';
 }]);
