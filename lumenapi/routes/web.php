@@ -31,3 +31,7 @@ $router->post('/post-method', function(){
 $router->get('/user/{id}', function($id){
 	return "User ID : " . $id;
 });
+
+$router->get('/post/{postId}/comments/{commentId}', function ($postId, $commentId){
+	return 'Post ID : ' . $postId . '. Comment ID : ' . $commentId;
+});
