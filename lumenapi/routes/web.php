@@ -15,24 +15,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-//Generate Application Key
-$router->get('/key', 'ExampleController@generateKey');
-
-$router->get('/user/{id}', 'ExampleController@getUser');
-$router->get('/post/cat1/{cat1}/cat2/{cat2}', 'ExampleController@getPost');
-
-$router->get('/admin/home', ['middleware' => 'age', function(){
-	return 'Old Enough';
-}]);
-
-$router->get('/fail', function(){
-	return 'Not yet mature';
-});
-
-$router->get('foo/bar', 'ExampleController@fooBar');
-$router->post('bar/foo', 'ExampleController@fooBar');
-
-$router->post('user/profile/request', 'ExampleController@userProfile');
-
-$router->get('/response','ExampleController@response');
+$router->post('/register', 'AuthController@register');
+$router->post('/login', 'AuthController@login');
 
