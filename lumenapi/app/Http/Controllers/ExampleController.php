@@ -29,11 +29,12 @@ class ExampleController extends Controller
     }
 
     public function fooBar(Request $request){
-        if($request->is('foo/bar')){
-            return 'Success';
-        }else{
-            return 'Fail';
-        }
+        // if($request->is('foo/bar')){
+        //     return 'Success';
+        // }else{
+        //     return 'Fail';
+        // }
         // return $request->path();
+        return $request->method();
     }
 }
