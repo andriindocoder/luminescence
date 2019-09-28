@@ -60,7 +60,8 @@ class ExampleController extends Controller
     }
 
     public function response(){
-        return (new Response('Data Successfully Created!', 201))
+        $data['status'] = 'Success';
+        return (new Response($data, 201))
             ->header('Content-Type', 'application/json');
     }
 }
