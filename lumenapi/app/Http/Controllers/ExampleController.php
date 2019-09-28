@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class ExampleController extends Controller
 {
     /**
@@ -11,7 +13,7 @@ class ExampleController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('age',['except' => ['getUser']]);
+        // $this->middleware('age',['except' => ['getUser']]);
     }
 
     public function generateKey(){
@@ -24,5 +26,9 @@ class ExampleController extends Controller
 
     public function getPost($cat1, $cat2){
         return 'Kategori 1 : ' . $cat1 . ' Kategori 2 : ' . $cat2;
+    }
+
+    public function fooBar(Request $request){
+        return $request->path();
     }
 }

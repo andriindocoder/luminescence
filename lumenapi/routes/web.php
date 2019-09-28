@@ -29,3 +29,5 @@ $router->get('/fail', function(){
 	return 'Not yet mature';
 });
 
+$router->get('foo/bar', 'ExampleController@fooBar');
+
