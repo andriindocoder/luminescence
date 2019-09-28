@@ -61,7 +61,8 @@ class ExampleController extends Controller
 
     public function response(){
         $data['status'] = 'Success';
-        return (new Response($data, 201))
-            ->header('Content-Type', 'application/json');
+        // return (new Response($data, 201))
+        //     ->header('Content-Type', 'application/json');
+        return response($data, 201);
     }
 }
