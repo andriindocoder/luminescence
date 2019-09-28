@@ -49,7 +49,7 @@ class ExampleController extends Controller
 
         // return $request->input('name', 'John Doe');
 
-        if($request->has('name')){
+        if($request->filled('name')){
             return 'Success';
         }else{
             return 'Fail';
