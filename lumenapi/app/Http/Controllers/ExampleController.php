@@ -47,6 +47,12 @@ class ExampleController extends Controller
         // return $user;
         // return $request->all();
 
-        return $request->input('name', 'John Doe');
+        // return $request->input('name', 'John Doe');
+
+        if($request->has('name')){
+            return 'Success';
+        }else{
+            return 'Fail';
+        }
     }
 }
