@@ -39,11 +39,14 @@ class ExampleController extends Controller
     }
 
     public function userProfile(Request $request){
-        $user['name'] = $request->name;
-        $user['username'] = $request->username;
-        $user['email'] = $request->email;
-        $user['password'] = $request->password;
+        // $user['name'] = $request->name;
+        // $user['username'] = $request->username;
+        // $user['email'] = $request->email;
+        // $user['password'] = $request->password;
 
-        return $user;
+        // return $user;
+        // return $request->all();
+
+        return $request->input('name', 'John Doe');
     }
 }
