@@ -49,10 +49,12 @@ class ExampleController extends Controller
 
         // return $request->input('name', 'John Doe');
 
-        if($request->filled('name')){
-            return 'Success';
-        }else{
-            return 'Fail';
-        }
+        // if($request->filled('name')){
+        //     return 'Success';
+        // }else{
+        //     return 'Fail';
+        // }
+
+        return $request->only(['username','password']);
     }
 }
