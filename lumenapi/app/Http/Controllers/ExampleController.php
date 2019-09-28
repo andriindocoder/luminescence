@@ -63,6 +63,10 @@ class ExampleController extends Controller
         $data['status'] = 'Success';
         // return (new Response($data, 201))
         //     ->header('Content-Type', 'application/json');
-        return response($data, 201);
+        // return response($data, 201);
+        return response()->json([
+            'message' => 'Fail!',
+            'status' => false
+        ], 404);
     }
 }
