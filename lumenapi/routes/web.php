@@ -30,5 +30,7 @@ $router->get('/fail', function(){
 });
 
 $router->get('foo/bar', 'ExampleController@fooBar');
-$router->get('bar/foo', 'ExampleController@fooBar');
+$router->post('bar/foo', 'ExampleController@fooBar');
+
+$router->post('user/profile/request', 'ExampleController@userProfile');
 

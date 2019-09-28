@@ -37,4 +37,13 @@ class ExampleController extends Controller
         // return $request->path();
         return $request->method();
     }
+
+    public function userProfile(Request $request){
+        $user['name'] = $request->name;
+        $user['username'] = $request->username;
+        $user['email'] = $request->email;
+        $user['password'] = $request->password;
+
+        return $user;
+    }
 }
