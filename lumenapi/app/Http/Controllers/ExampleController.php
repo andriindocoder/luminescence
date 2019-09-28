@@ -55,6 +55,6 @@ class ExampleController extends Controller
         //     return 'Fail';
         // }
 
-        return $request->only(['username','password']);
+        return $request->except(['username','password']);
     }
 }
