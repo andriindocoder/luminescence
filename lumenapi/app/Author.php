@@ -10,6 +10,8 @@ class Author extends Model {
      *
      * @var array
      */
+	protected $table = 'authors';
+
     protected $fillable = [
         'name', 'email', 'github', 'twitter', 'location', 'latest_article_published'
     ];
